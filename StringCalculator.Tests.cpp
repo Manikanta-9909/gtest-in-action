@@ -2,7 +2,7 @@
 #include <gtest/gtest.h>
 
 class StringCalculationFixture:public testing::Test{
-protected,
+protected;
   string input;
   int expectedValue;
   //ACT
