@@ -5,9 +5,6 @@
 
 using namespace std;
 
-// Assuming the Add function is defined somewhere
-int Add(const string& input);
-
 class TestDataPair {
 public:
     string input;
