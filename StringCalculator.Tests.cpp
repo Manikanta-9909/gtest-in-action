@@ -58,3 +58,9 @@ TEST(StringCalculatorTestSuitec,add_input_passed_numbers_over_1_Is_Expected){
   ASSERT_EQ(actualValue,expectedValue);
 }
 
+TEST(StringCalculatorTestSuitec,add_input_passed_multiple_delimiters_Sum_Is_Expected){
+  string input="//%$1,%%10,%%%%,20,\n80,90";
+  int expectedValue = 201;
+  int actualValue = Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
