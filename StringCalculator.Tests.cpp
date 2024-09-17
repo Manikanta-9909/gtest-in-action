@@ -45,8 +45,14 @@ TEST(StringCalculatorTestSuite,add_input_passed_delimited_with_newline_and_comma
   int actualValue = Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
+
 TEST(StringCalculatorTestSuitec,add_input_passed_negative_numbers_exception_invalid_Arguments){
   string input="1,-1,-7";
+  ASSERT_THROW(Add(input),invalid_argument);
+}
+
+TEST(StringCalculatorTestSuitec,add_input_passed_numbers_over_1000_Ignore_Them){
+  string input="1,1200";
   ASSERT_THROW(Add(input),invalid_argument);
 }
 
