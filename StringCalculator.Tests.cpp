@@ -1,7 +1,7 @@
 #include "StringCalculator.h"
 #include <gtest/gtest.h>
 
-class StringCalculationFixture::public testing::Test{
+class StringCalculationFixture:public testing::Test{
 protected,
   string input;
   int expectedValue;
