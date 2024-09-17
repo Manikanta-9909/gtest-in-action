@@ -26,14 +26,14 @@ TEST(StringCalculatorTestSuite,add_ZeroInputString_ZeroIsExpected)
 
 TEST(StringCalculatorTestSuite,add_1InputString_1IsExpected){
 
-  string input="1"
+  string input="1";
   int expectedValue=1;
   int actualValue =Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
 
 TEST(StringCalculatorTestSuite,add_when_passed_two_comma_delimed_numbers_Sum_Is_Expected){
-  string input="2,5"
+  string input="2,5";
   int expectedValue = 10;
   int actualValue = Add(input);
   ASSERT_EQ(actualValue,expectedValue);
