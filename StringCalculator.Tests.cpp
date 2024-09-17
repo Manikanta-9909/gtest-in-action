@@ -51,8 +51,10 @@ TEST(StringCalculatorTestSuitec,add_input_passed_negative_numbers_exception_inva
   ASSERT_THROW(Add(input),invalid_argument);
 }
 
-TEST(StringCalculatorTestSuitec,add_input_passed_numbers_over_1000_Ignore_Them){
+TEST(StringCalculatorTestSuitec,add_input_passed_numbers_over_1_Is_Expected){
   string input="1,1200";
-  ASSERT_THROW(Add(input),invalid_argument);
+  int expectedValue = 1;
+  int actualValue = Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
 }
 
