@@ -7,7 +7,7 @@ protected,
   int expectedValue;
   //ACT
   int actualValue;
-}
+};
 
 TEST_F(StringCalculationFixture,add_emptyInputString_ZeroIsExpected){
   input= "0";
