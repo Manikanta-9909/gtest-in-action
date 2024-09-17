@@ -32,9 +32,21 @@ TEST(StringCalculatorTestSuite,add_1InputString_1IsExpected){
   ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(StringCalculatorTestSuite,add_when_passed_two_comma_delimed_numbers_Sum_Is_Expected){
+TEST(StringCalculatorTestSuite,add_input_passed_two_comma_delimed_numbers_Sum_Is_Expected){
   string input="2,5";
   int expectedValue = 7;
   int actualValue = Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,add_input_passed_delimited_with_newline_and_comma_Sum_Is_Expected){
+  string input="10,\n2,5";
+  int expectedValue = 17;
+  int actualValue = Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
+TEST(StringCalculatorTestSuitec,add_input_passed_negative_numbers_exception_invalid_Arguments){
+  string input="1,-1,-7";
+  ASSERT_THROW(Add(input),invalid_argument);
+}
+
