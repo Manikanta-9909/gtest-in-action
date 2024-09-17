@@ -34,7 +34,7 @@ TEST(StringCalculatorTestSuite,add_1InputString_1IsExpected){
 
 TEST(StringCalculatorTestSuite,add_when_passed_two_comma_delimed_numbers_Sum_Is_Expected){
   string input="2,5";
-  int expectedValue = 10;
+  int expectedValue = 7;
   int actualValue = Add(input);
   ASSERT_EQ(actualValue,expectedValue);
 }
