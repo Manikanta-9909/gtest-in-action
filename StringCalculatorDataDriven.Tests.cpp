@@ -25,6 +25,11 @@ protected:
     }
 };
 
+void fakeDisplayFunction(int result){
+    
+}
+
+
 TEST_F(StringCalculatorTestFixture, DataDrivenTestCase) {
     for (const TestDataPair& dataPair : dataList) {
         int actualValue = Add(dataPair.input);
