@@ -43,9 +43,9 @@ vector<int> get_numbers(const string &input) {
 	return numbers;
 }
 
-int Add(const string &input) {
+void Add(const string &input) {
 	if (input.empty())
-		return 0;
+		cout<< 0;
 
 	vector<int> numbers = get_numbers(input);
 
