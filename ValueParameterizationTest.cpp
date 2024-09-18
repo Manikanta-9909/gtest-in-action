@@ -1,8 +1,9 @@
 #include"StringCalculator.h"
 #include <gtest/gtest.h>
+#include <tuple>
 
 class StringCalculatorFixture:public testing::Test{
-protected;
+protected:
 string inpuy;
 int expectedValue;
 int actualValue;
