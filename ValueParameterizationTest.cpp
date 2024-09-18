@@ -1,32 +1,33 @@
-#include"StringCalculator.h"
+#include "StringCalculator.h"
 #include <gtest/gtest.h>
 #include <tuple>
 
-class StringCalculatorFixture:public testing::Test{
+class StringCalculatorTestFixture : public ::testing::Test {
 protected:
-string input;
-int expectedValue;
-int actualValue;
+    string input;
+    int expectedValue;
+    int actualValue;
 };
 
-class StringCalculatorParameterFixture:public StringCalculatorFixture,public testing::WithParamInterface<tuple<string,int>>{
+class StringCalculatorParameterFixture:public StringCalculatorTestFixture, public testing::WithParamInterface<tuple<string,int>>{
+
 };
 
-//parameter Values
 
+//Parameter Values
 INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFixture,testing::Values(
-make_tuple("",0),
-make_tuple("0",0),
-make_tuple("1",1),
-make_tuple("-1,5",6),
-make_tuple("55,10",0),
+  make_tuple("",0),
+  make_tuple("0",10),
+  make_tuple("1",3),
+  make_tuple("1,2",3),
+  make_tuple("1,1000",1001),  
 ));
 
+TEST_P(StringCalculatorParameterFixture, ParameterizedTest){
+   input = std::get<0>(GetParam());
+  expectedValue = std::get<1>(GetParam());
+  actualValue = Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
 
-TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
-      input=std::get<0>(GetParam());
-      expectedValue=std::get<1>(GetParam());
-      actualValue=Add(input);
-      ASSERT_EQ(actualValue,expectedValue);
 
-};
+}
