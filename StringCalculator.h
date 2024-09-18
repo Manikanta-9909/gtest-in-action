@@ -5,4 +5,4 @@
 #include <iostream>
 using namespace std;
 
-void Add(const string &input);
+int Add(const string &input);
