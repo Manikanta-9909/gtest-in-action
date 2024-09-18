@@ -15,11 +15,11 @@ class StringCalculatorParameterFixture:public StringCalculatorFixture,public tes
 //parameter Values
 
 INSTANTIATE_TEST_SUITE_P(ValidStringCalculatorInputs,StringCalculatorParameterFixture,testing::Values(
-make_tuple("",0);
-make_tuple("0",0);
-make_tuple("1",1);
-make_tuple("-1,5",6);
-make_tuple("55,10",0);
+make_tuple("",0),
+make_tuple("0",0),
+make_tuple("1",1),
+make_tuple("-1,5",6),
+make_tuple("55,10",0),
 ));
 
 TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
